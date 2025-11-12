@@ -18,8 +18,6 @@ import Link from 'next/link';
 import {
 	IconArrowUp as IconTop,
 	IconBrandFacebook,
-	IconBrandInstagram,
-	IconBrandTwitter,
 	IconBrandYoutube,
 } from '@tabler/icons-react';
 
@@ -41,32 +39,18 @@ const copyright = `© 2025 Feedology. All right reserved.`; // Put Copyright her
 // Put Footer links row 1 here
 const footerLinks1: FooterLink[] = [
 	{
-		href: '/about',
-		label: 'About',
+		href: 'https://blogs.feedology.io/',
+		label: 'Blogs',
+		target: '_blank',
 	},
 	{
 		href: '/contact',
 		label: 'Contact us',
 	},
 	{
-		href: '/sample',
-		label: 'Affiliate Program',
-	},
-];
-
-// Put Footer links row 2 here
-const footerLinks2: FooterLink[] = [
-	{
-		href: '/#features-1',
-		label: 'Features Grid',
-	},
-	{
-		href: '/#features-2',
-		label: 'Features Slider',
-	},
-	{
-		href: '/#features-3',
-		label: 'Features Accordion',
+		href: 'https://support.feedology.io/',
+		label: 'Support center',
+		target: '_blank',
 	},
 ];
 
@@ -80,10 +64,6 @@ const footerLinks3: FooterLink[] = [
 		href: '/privacy',
 		label: 'Privacy Policy',
 	},
-	{
-		href: '/cookies',
-		label: 'Cookie Policy',
-	},
 ];
 
 // Put Social links here
@@ -92,16 +72,6 @@ const socialLinks: SocialLink[] = [
 		href: '#',
 		icon: <IconBrandFacebook />,
 		label: 'Facebook',
-	},
-	{
-		href: '#',
-		icon: <IconBrandInstagram />,
-		label: 'Instagram',
-	},
-	{
-		href: '#',
-		icon: <IconBrandTwitter />,
-		label: 'Twitter',
 	},
 	{
 		href: '#',
@@ -243,30 +213,15 @@ export default function Footer() {
 									<Grid size={{ xs: 12, md: 4, lg: 'auto' }}>
 										<Stack spacing={2}>
 											<Typography color="#ffffff" variant="subtitle1">
-												{`Company`}
+												{`Links`}
 											</Typography>
 											<Stack spacing={1.5}>
 												{footerLinks1.map((link) => (
-													<Link key={link.label} href={link.href}>
-														<Typography
-															color="rgba(160, 160, 174, 1)"
-															variant="body1"
-														>
-															{link.label}
-														</Typography>
-													</Link>
-												))}
-											</Stack>
-										</Stack>
-									</Grid>
-									<Grid size={{ xs: 12, md: 4, lg: 'auto' }}>
-										<Stack spacing={2}>
-											<Typography color="#ffffff" variant="subtitle1">
-												{`Features`}
-											</Typography>
-											<Stack spacing={1.5}>
-												{footerLinks2.map((link) => (
-													<Link key={link.label} href={link.href}>
+													<Link
+														key={link.label}
+														href={link.href}
+														{...(link.target ? { target: link.target } : {})}
+													>
 														<Typography
 															color="rgba(160, 160, 174, 1)"
 															variant="body1"
@@ -310,6 +265,7 @@ export default function Footer() {
 interface FooterLink {
 	href: string;
 	label: string;
+	target?: string;
 }
 
 interface SocialLink {
