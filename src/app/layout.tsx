@@ -33,7 +33,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body className={`${monaSans.variable} antialiased`}>
 				<AppRouterCacheProvider>
-					<ThemeProvider theme={theme} defaultMode="dark">
+					<ThemeProvider theme={theme} defaultMode="light">
 						<InitColorSchemeScript attribute="class" />
 						<Providers>
 							<Box sx={{ position: 'relative', zIndex: 2 }}>
