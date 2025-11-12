@@ -10,6 +10,7 @@ import {
 	Stack,
 	Typography,
 	Grid,
+	useColorScheme,
 } from '@mui/material';
 
 import { IconMenu, IconX as IconClose } from '@tabler/icons-react';
@@ -173,6 +174,7 @@ interface NavigationLink {
 }
 
 function LogoWrapper() {
+	const { mode } = useColorScheme();
 	return (
 		<Link href="/" underline="none">
 			<Stack alignItems="center" direction="row" spacing={1.5}>

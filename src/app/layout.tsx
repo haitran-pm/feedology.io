@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Mona_Sans } from 'next/font/google';
+import './globals.css';
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
