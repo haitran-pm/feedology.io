@@ -23,6 +23,14 @@ export const metadata: Metadata = {
 	title: 'Feedology.IO | Smart Product Feed Management for Google Shopping',
 	description:
 		'Feedology helps merchants turn raw product data into growth-ready feeds that connect, perform, and convert - everywhere shoppers are.',
+	openGraph: {
+		title: 'Feedology.IO | Smart Product Feed Management for Google Shopping',
+		description:
+			'Feedology helps merchants turn raw product data into growth-ready feeds that connect, perform, and convert - everywhere shoppers are.',
+		url: 'http://feedology.io/',
+		siteName: 'Feedology',
+		images: [{ url: 'http://feedology.io/sharer.jpg' }],
+	},
 };
 
 export default function RootLayout({
